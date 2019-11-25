@@ -1,21 +1,46 @@
+
 package Sumofnumbers;
+
+import java.util.Scanner;
 
 public class Largestno 
 {
 	public static void main(String[]args) 
 	{
+		int n,max;
+
+		Scanner sc = new Scanner(System.in); 
 		
-		int [] array = {50,20,60,30,10};
-		int i;
-		int max = array[0];  // Initialize the maximum number
+		System.out.println("enter the limit :");
+		
+		n = sc.nextInt();
+		
+		int a[] = new int[n];
 				
-		for(i=1;i<5;i++)
+	    System.out.println("enter the numbers :");
+
+				
+		
+		for(int i=0; i<n ;i++)
 		{
-			if (array[i] > max)
-				max = array[i];
+			 a[i]  = sc.nextInt();
 		}
+		max = a[0] ;
+	    
+		for(int i=0;i<n;i++)
+		{
+			if(max < a[i])
+			{
+				max = a[i];
+			}
+		}
+		 
+
 			System.out.println("largest is :" +max);
-		}
+	}
+
+
+		
 		
 
 }
